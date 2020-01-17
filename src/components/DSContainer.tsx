@@ -7,7 +7,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import useStyles from "../helpers/App";
 
 
-
 const DSContainer = (props) => {
     const classes = useStyles();
     const theme = useTheme();

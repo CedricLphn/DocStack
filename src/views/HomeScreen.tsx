@@ -2,8 +2,9 @@ import React from 'react';
 import { Typography, Card, CardActionArea, CardMedia, CardContent, CardActions, Button, Grid, Paper } from '@material-ui/core';
 import useStyles from "../helpers/App";
 
-const HomeScreen = () => {
+const HomeScreen = props => {
     const classes = useStyles();
+    console.log(props);
     return(
         <>
         <Typography variant="h5" component="h1">

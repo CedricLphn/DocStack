@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Grid, Button, List, ListSubheader, ListItem, ListItemText, Dialog, DialogTitle, DialogContent, DialogContentText, TextField, DialogActions } from "@material-ui/core";
+import { Grid, Button, List, ListSubheader, ListItem, 
+  ListItemText, Dialog, DialogTitle, DialogContent, DialogContentText, 
+  TextField, DialogActions } from "@material-ui/core";
 import CreateIcon from '@material-ui/icons/Create';
 
 function ListItemLink(props) {
@@ -40,7 +42,7 @@ const LeftBar = () => {
             Cancel
           </Button>
           <Button onClick={handleClose} color="primary">
-            Subscribe
+            Submit
           </Button>
           </DialogActions>
         </Dialog>
@@ -51,7 +53,6 @@ const LeftBar = () => {
     return (
         <Grid item xs={4}>
                 {dialog()}
-
         <Grid
           container
           direction="row"
@@ -67,22 +68,42 @@ const LeftBar = () => {
                 Create
             </Button>
       </Grid>
-    <div>
-      <List subheader={<ListSubheader>Category</ListSubheader>} component="nav" aria-label="secondary mailbox folders">
-        <ListItem button>
-          <ListItemText primary="SharePoint" />
-        </ListItem>
-        <ListItemLink href="#simple-list">
-          <ListItemText primary="React" />
-        </ListItemLink>
-        <ListItemLink href="#simple-list">
-          <ListItemText primary="React Native" />
-        </ListItemLink>
-        <ListItemLink href="#simple-list">
-          <ListItemText primary="NodeJs" />
-        </ListItemLink>
-      </List>
-    </div>
+          <List subheader={<ListSubheader>Category</ListSubheader>} component="nav" aria-label="secondary mailbox folders">
+            <ListItem button>
+              <ListItemText primary="SharePoint" />
+            </ListItem>
+            <ListItemLink href="/test">
+              <ListItemText primary="React" />
+            </ListItemLink>
+            <ListItemLink href="#simple-list">
+              <ListItemText primary="React Native" />
+            </ListItemLink>
+            <ListItemLink href="#simple-list">
+              <ListItemText primary="NodeJs" />
+            </ListItemLink>
+          </List>
+          <List subheader={<ListSubheader>Last articles</ListSubheader>} component="nav" aria-label="secondary mailbox folders">
+            <ListItem button>
+              <ListItemText 
+              primary="SharePoint"
+              secondary="lorem ipsum..." />
+            </ListItem>
+            <ListItemLink href="#simple-list">
+              <ListItemText 
+              primary="React"
+              secondary="lorem ipsum..." />
+            </ListItemLink>
+            <ListItemLink href="#simple-list">
+              <ListItemText 
+              primary="React Native"
+              secondary="lorem ipsum..."  />
+            </ListItemLink>
+            <ListItemLink href="#simple-list">
+              <ListItemText 
+              primary="NodeJs"
+              secondary="lorem ipsum..."  />
+            </ListItemLink>
+          </List>
         </Grid>
     )
 }
